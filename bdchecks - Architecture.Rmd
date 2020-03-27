@@ -1,0 +1,29 @@
+---
+title: "bdchecks - Architecture"
+author: "Rudra"
+date: "27/03/2020"
+output: word_document
+---
+
+1. Introduction to Bdchecks
+
+Bdcheks is a R package which serves the purpose for performing and managing various biodiversity data checks. 
+Various Features under Bdchecks:
+1. Interactive Shiny App which is user-friendly(For Inexperienced R Users)
+2. Command Line Functionality (For experienced R Users)
+3. Admin Page to add,edit and manage their own data collection(For Advanced R Users)
+
+2. Architecture of bdchecks
+I have explained the architecture of bdchecks in the form of bullet points as shown below.
+
+1. The process starts with having a YAML File which contains all the metadata which is required for performing checks. There also consists a function file in R.
+
+2. Another YAML file is created for storing data of all the possible testing scenarios. As the file contains multiple test scenario, each of which is later converted to a single test for execution and analysis.
+
+3. The tests are performed automatically and a test report is generated which shows the expected vs observed result for each test case.
+
+4. The test report can be viewed and managed in the Admin App which is user friendly app built using Shiny Package and is benefitial for editing and managing the data checks.
+
+5. There is also a User App built using Shiny Package where users can add data, perform the selected data checks and can efficiently filter and download the clean data.
+
+
