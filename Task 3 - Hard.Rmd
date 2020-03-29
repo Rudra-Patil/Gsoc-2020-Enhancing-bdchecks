@@ -1,0 +1,28 @@
+---
+title: "Task 3 (Hard) - GSoC 2020"
+author: "Rudra"
+date: "`r Sys.Date()`"
+output: html_document
+subtitle: The solution of bdchecks GSOC2020 hard test
+---
+
+## New Ideas For bdchecks R Package and Code Structure
+
+**1. Integrating Multiple data checks into a single data check** - Commonly used multiple data check features can be combined into a single data check feature. It can make the data checking features more efficient and can also give better analysis of the data. Seperate functions should also be available if the user is very particular of that data check.
+eg. In bdclean package, there are seperate data check functions to check whether year,month or day is empty. Instead we can implement another function to check if any of the three(year,month,date) are non-empty and return the empty data.
+
+**2.Including Dependancies** - Including the dependancies which are required by each package must be included in the METADATA. Additional information including if any imports are required prior to running this package must be noted in documentation along with dependancies.
+eg. Depends: R (>= 3.1.0)
+    Imports:
+    dplyr,
+    ggvis
+    
+**3. Package Updation** - If any package which is used in pre-existing functions gets updated, a tag should indicate about the latest updation and we have to make the necesarry changes in the code as per the package updation(if any).
+    
+**4. Bug Reports from User** - A Github link should be included from which the any user can open issues on Github and suggest improvements and report bugs during usage. A continuous development cycle can be achieved by implementing Bug reports from user and improvements from our end. User can also add and suggest what all data checks which can be added.
+
+**5. Continuous Integration** - Travis is a continuous integration service, which means that it runs automated testing code everytime you push to GitHub.
+
+**6. Data check quality** - Low quality data checks must be seperated from high quality data check after veryfing them on various data sets. METADATA should alse be updated and contain all the necessary information
+
+**7. Implementing proper Intendation and code comments** - It makes debugging easier and enhances code-redability and promote more developers to contribute towards open source development of bdchecks.
